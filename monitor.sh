@@ -7,7 +7,7 @@
 while [ 1 ];
 do
   	printf "\033c"
-        number=$(more *auto* | grep . | wc -l)
+        number=$(more *auto* | egrep '\.0' | wc -l)
         all=$(ls *.mrc | wc -l)
         files=$(ls *autopick* | wc -l)
         avg=$(expr $number / $files)
